@@ -1,12 +1,13 @@
 document.querySelector('.generate-btn').addEventListener('click', function() {
     const wishes = [
-        "Happy Birthday,  Thirisha! You bring joy to everyone around you!",
-        "To the most wonderful person I know,  Thirisha, Happy Birthday! 🎉",
-        "May your day be as bright and cheerful as you are,  Thirisha.",
-        "Wishing you a day full of smiles and happiness,  Thirisha!",
-        "Happy Birthday,  Thirisha! You always know how to make things better!",
-        "Another year to celebrate how amazing you are,  Thirisha. Happy Birthday!"
+        "Happy Birthday,  ❤️Thirisha! 🎉",
+        "To the wonderful  ❤️Thirisha, Happy Birthday!",
+        "May your day be bright, Thirisha ❤️!",
+        "Wishing you smiles and happiness, ❤️ Thirisha!",
+        "Happy Birthday, Thirisha!  ❤️You make everything better!",
+        "Another year to celebrate you,  ❤️Thirisha!"
     ];
+    
 
     const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
     displayWish(randomWish);
