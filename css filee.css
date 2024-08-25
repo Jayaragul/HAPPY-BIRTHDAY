@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #f8b7b7, #ebd4d4); /* Pink gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    position: relative; /* Allow absolute positioning of flower */
+}
+.rabbit {
+    position: absolute;
+    bottom: 10px; /* Adjust position as needed */
+    right: 810px; /* Adjust position as needed */
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure it's above other content if necessary */
+}
+
+/* Existing CSS */
+
+.coding-queen {
+    font-size: 1.8em; /* Adjust size as needed */
+    font-weight: bold;
+    color: #ff6f91; /* Use a color that stands out */
+    margin-top: 20px; /* Space from the other text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Optional shadow for emphasis */
+}
+
+
+.background-flower {
+    position: absolute;
+    bottom: 10px; /* Move the flower partially out of view */
+    right: 500px; /* Move the flower partially out of view */
+    width: 2000px; /* Adjust as needed */
+    height: auto;
+    background: url('tulip.png') no-repeat center center;
+    background-size: contain; /* Adjust size to fit */
+    opacity: 1; /* Make it visible */
+    z-index: 0; /* Place it behind the container and other content */
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    background: rgba(129, 98, 98, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure the container is above the flower */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.wish-box {
+    background: #ffebeb;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    min-height: 50px;
+}
+
+.wish-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #333;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.generate-btn {
+    padding: 15px 30px;
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+    background-color: #ff8fa3;
+}
+
+.hearts {
+    font-size: 2em;
+    margin-top: 20px;
+    animation: floatHearts 3s infinite ease-in-out;
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.confetti::before,
+.confetti::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    animation: confetti 2.5s infinite;
+}
+
+.confetti::before {
+    left: 20%;
+    animation-delay: 0.5s;
+}
+
+.confetti::after {
+    right: 20%;
+}
+
+@keyframes confetti {
+    0% { transform: translateY(-100%) rotate(0); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes floatHearts {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+}
+
+.cake {
+    position: absolute;
+    width: 150px; /* Make the cake larger */
+    height: auto;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.cake1 {
+    bottom: 10px;
+    left: 10px;
+}
+
+.cake2 {
+    bottom: 10px;
+    right: 10px;
+}
+
+.cake:hover {
+    transform: scale(1.1); /* Slightly enlarge the cake */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Add shadow for effect */
+}
